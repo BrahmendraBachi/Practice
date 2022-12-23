@@ -54,6 +54,7 @@ public class CollectionClass {
 
     private static void usingGenerics() {
 
+        //  <> represents generics
         List<Integer> values = new ArrayList<>();
 
         //takes only integers as object

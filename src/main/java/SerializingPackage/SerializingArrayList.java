@@ -21,7 +21,7 @@ public class SerializingArrayList {
 //        values.add(1);
 //        values.add(2);
 
-        //Object Mrapper is a class change
+        //Object Mapper is a class which changes objects to string and vice versa
         ObjectMapper mapper = new ObjectMapper();
 
 //        String jsonString = mapper.writeValueAsString(values);
@@ -32,6 +32,7 @@ public class SerializingArrayList {
 //
 //        System.out.println(newValues);
 
+        // declaring list of objects
         List<SimplePojo> simplePojos = new ArrayList<>();
 
         SimplePojo simplePojo = new SimplePojo();
@@ -40,21 +41,33 @@ public class SerializingArrayList {
         simplePojo.setName("Bachi");
         simplePojo.setAge(22);
 
+        // adding an object simplePojo to list
         simplePojos.add(simplePojo);
 
         SimplePojo simplePojo1 = new SimplePojo();
 
         simplePojo1.setId(2);
         simplePojo1.setName("Hari");
-        simplePojo.setAge(23);
+        simplePojo1.setAge(23);
 
+        // adding an object simplePojo to list
         simplePojos.add(simplePojo1);
 
+        //this method tries to convert List<Objects> to string
         String json = mapper.writeValueAsString(simplePojos);
 
+        System.out.println("\n *** after converting List<Object> into string");
+        System.out.println(json);
+        System.out.println("\n ***Class is");
+        System.out.println(json.getClass().getName());
+
+        //and can retrieve back to original i.e., List<Object>
         List<SimplePojo> users = mapper.readValue(json, List.class);
 
+        System.out.println("\n *** after retrieving back from String to List<Object>");
         System.out.println(users);
+        System.out.println("\n ***Class is");
+        System.out.println(users.getClass().getName());
 
 
 

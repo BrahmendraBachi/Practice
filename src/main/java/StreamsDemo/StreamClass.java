@@ -16,7 +16,7 @@ public class StreamClass {
 
         values.add(8);
 
-        System.out.println("Before Sorting");
+        System.out.println("\n ***Before Sorting");
 
         //forEach is a streamsAPI which uses Lambda Expression
         values.forEach(System.out::println);
@@ -30,7 +30,7 @@ public class StreamClass {
         //Sorts the array
         Collections.sort(values);
 
-        System.out.println("After Sorting");
+        System.out.println("\n ***After Sorting");
 
         values.forEach(System.out::println);
 

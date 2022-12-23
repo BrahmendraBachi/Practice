@@ -18,9 +18,10 @@ public class MapClass {
         // prints map in an inorder way as same like Set
         System.out.println(map);
 
-        System.out.println();
-        System.out.println("Using map.getKeys()");
-        System.out.println();
+        System.out.println("\n***Using map.getKeys()***\n");
+
+
+
         // Enhanced for loop
         for(String key : map.keySet()){
             System.out.println(key + " " + map.get(key));
@@ -29,7 +30,7 @@ public class MapClass {
         // Map.Entry is a way to collect the data in the HashMap
         Set<Map.Entry<String, String>> data = map.entrySet();
 
-        System.out.println("Map.Entry Implementation");
+        System.out.println("\n***Map.Entry Implementation***\n");
 
         // Enhanced for loop using Map.Entry
         for(Map.Entry<String, String> d : data)
