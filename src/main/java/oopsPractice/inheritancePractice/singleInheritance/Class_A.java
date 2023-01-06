@@ -1,6 +1,6 @@
-package oopsPractice.inheritancePractice;
+package oopsPractice.inheritancePractice.singleInheritance;
 
-public class Class_A extends Class_B{
+public class Class_A extends Class_B {
 
     public static final String name = "Bachi";
 

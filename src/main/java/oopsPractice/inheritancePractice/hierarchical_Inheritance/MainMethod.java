@@ -1,6 +1,6 @@
 package oopsPractice.inheritancePractice.hierarchical_Inheritance;
 
-import oopsPractice.inheritancePractice.Class_A;
+import oopsPractice.inheritancePractice.singleInheritance.Class_A;
 
 public class MainMethod {
 

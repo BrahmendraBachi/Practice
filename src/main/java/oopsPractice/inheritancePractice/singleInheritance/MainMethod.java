@@ -1,7 +1,6 @@
-package oopsPractice.inheritancePractice;
+package oopsPractice.inheritancePractice.singleInheritance;
 
-import com.sun.org.apache.xalan.internal.xsltc.compiler.CompilerException;
-import jdk.nashorn.internal.ir.annotations.Ignore;
+import oopsPractice.inheritancePractice.singleInheritance.Class_A;
 
 public class MainMethod {
 

@@ -1,4 +1,4 @@
-package oopsPractice.inheritancePractice;
+package oopsPractice.inheritancePractice.singleInheritance;
 
 public class Class_B {
 
