@@ -2,12 +2,10 @@ package castingPackage;
 
 import interfacePackage.Interface_A;
 
-public class Class_A implements Interface_A {
+public class Class_A{
 
-
-
-    @Override
-    public int method1(int a) {
-        return 0;
+    void method1(){
+        System.out.println("From A");
     }
+
 }

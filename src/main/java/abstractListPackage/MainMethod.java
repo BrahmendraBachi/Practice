@@ -1,6 +1,5 @@
 package abstractListPackage;
 
-import org.jdom.Element;
 
 import java.util.AbstractList;
 

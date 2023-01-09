@@ -4,8 +4,16 @@ public class MainMethod {
 
     public static void main(String[] args) {
 
-        Class_A a = new Class_A();
-        System.out.println(a.method1(2));
+        Class_A a = new Class_B("Bachi");
+
+        //Upcasting is the process where parent class wants
+        //use the method which is used by child with same name
+        //then upcasting is used
+        a.method1();
+
+        //This is also called as Runtime Polymorphism
+
+
     }
 
 }
