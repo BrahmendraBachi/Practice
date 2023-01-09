@@ -5,86 +5,67 @@ import org.jdom2.Document;
 import org.jdom2.Element;
 import org.jdom2.JDOMException;
 import org.jdom2.input.SAXBuilder;
-import org.jdom2.output.Format;
-import org.jdom2.output.XMLOutputter;
-
 
 import java.io.*;
+import java.util.List;
 
 public class JdomRead {
 
     public static void main(String[] args) throws IOException, JDOMException {
+
+
+        // SAXbuilder uses a third-party SAX parser (chosen by JAXP by default, or you can configure it manually)
+        // to handle the parsing duties and uses an instance of a SAXHandler to listen
+        // to the SAX events in order to construct a document with JDOM content using a JDOMFactory.
+        // Information about SAX can be found at http://www.saxproject.org.
         SAXBuilder saxBuilder = new SAXBuilder();
 
         File inputFile = new File("input2.xml");
 
+
         Document document = saxBuilder.build(inputFile);
 
-        Element staff = document.getRootElement().getChild("staff");
+        //getRootElement() method is used to get root element of the xml file
+        //getChild(*cname*) method gives the child present in the selected element where name is child name
 
-        System.out.println(staff.getChild("Department"));
+
+        //prints RootElement
+//        System.out.println(document.getRootElement());
+
+        //getChild() method gives the child *students* present in the root element.
+        Element students = document.getRootElement().getChild("students");
+
+        //getChild() method gives the child *student* present in the students element.
+        System.out.println(students.getChild("student") + "\n");
+
+        //getChildren() method gives all the children present in the given element students
+        List<Element> studentsList = students.getChildren();
+
+        System.out.println(studentsList + "\n");
+
+        //
+        System.out.println(students.getChildren("student") + "\n");
+
+        Element student = students.getChild("student");
+
+//        XMLOutputter xmlOutputter = new XMLOutputter();
 //
-//        Element classElement = document.getRootElement();
+//        xmlOutputter.setFormat(Format.getPrettyFormat());
 //
-//        XMLOutputter xmlOutputter = new XMLOutputter(Format.getPrettyFormat());
+//        xmlOutputter.output();
 //
-//        xmlOutputter.output(document, System.out);
+//        xmlOutputter.output(student, System.out);
 
+        // gives the id of first node present in the XML
+        System.out.println(student.getAttribute("id") + "\n");
 
+        for(Element stud : studentsList){
+            //getValue is a method used to print the value of the attribute
+            System.out.println("Roll No : " + stud.getAttribute("id").getValue());
+            System.out.println("Name : " + stud.getChild("name").getText() + "\n");
 
-        // output to any Writer
-//        try(FileWriter fileWriter =
-//                    new FileWriter("input2.xml")){
-//            xmlOutputter.output(new Document(), fileWriter);
-//        }
-
-        writeXml(System.out);
-//
-    }
-
-    public static void writeXml(OutputStream output) throws IOException {
-
-        XMLOutputter xmlOutputter = new XMLOutputter(Format.getPrettyFormat());
-
-        Document doc = new Document();
-
-        doc.setRootElement(new Element("company"));
-        Element staff = new Element("staff");
-//        doc.getRootElement().addContent(staff);
-//        staff.setAttribute("id", "1001");
-        Element Department = new Element("Department");
-        staff.addContent(Department);
-        doc.getRootElement().addContent(staff);
-//        staff.setAttribute("id", "1001");
-//        staff.addContent(new Element("name").setText("mkyong"));
-//        staff.addContent(new Element("role").setText("support"));
-//        staff.addContent(new Element("salary")
-//                .setAttribute("curreny", "USD").setText("5000"));
-//        staff.addContent(new Comment("for special characters like < &, need CDATA"));
-//
-//        staff.addContent(new Element("bio")
-//                .setContent(new CDATA("HTML tag <code>testing</code>")));
-//
-//        doc.getRootElement().addContent(staff);
-//
-//        Element staff2 = new Element("staff");
-//        staff2.setAttribute("id", "1002");
-//        staff2.addContent(new Element("name").setText("yflow"));
-//        staff2.addContent(new Element("role").setText("admin"));
-//        staff2.addContent(new Element("salary")
-//                .setAttribute("curreny", "EUD").setText("8000"));
-//        staff2.addContent(new Element("bio")
-//                .setContent(new CDATA("a & b")));
-//        doc.getRootElement().addContent(staff2);
-
-        xmlOutputter.setFormat(Format.getPrettyFormat());
-
-        xmlOutputter.output(doc, output);
-
-        try(FileWriter fileWriter =
-                    new FileWriter("input2.xml")){
-            xmlOutputter.output(doc, fileWriter);
         }
+
 
 
     }
