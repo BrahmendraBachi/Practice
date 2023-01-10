@@ -9,7 +9,6 @@ public class SerializingJSON {
 
     public static void main(String[] args) {
 
-        ArrayList<String> namesList = new ArrayList<String>();
 
         var values = new JSONObject();
 
