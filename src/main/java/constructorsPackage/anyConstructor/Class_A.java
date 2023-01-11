@@ -29,6 +29,7 @@ public class Class_A {
     }
 
 
+    public Class_A() {
 
-
+    }
 }
