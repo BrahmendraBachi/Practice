@@ -17,7 +17,8 @@ public class ExtendingClass_A extends AbstractClass{
     }
 
     @Override
-    void ab_method2() {
+    void ab_method2()
+    {
         System.out.println("From ExtendingClass_A - ab_method1()\n");
     }
 }

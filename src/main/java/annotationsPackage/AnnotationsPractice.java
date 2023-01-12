@@ -18,14 +18,16 @@ import java.lang.annotation.*;
     int version();
 
     // os() an version() are the values of the annotation
-    // If you don't have any value - Marker annotation
+    // If you don't have any values - Marker annotation
     // 1 value - Single value annotation
     // n values - Multi value annotation
 
 }
 
 // we can declare this annotation
-// with one value as *os* has value
+// with one value as *os* has default value
+
+//default values can be changed
 @SmartPhone(version = 6)
 class NokiaBSeries{
 
@@ -61,7 +63,7 @@ public class AnnotationsPractice{
         //getAnnotation(*annotation*) gives the annotation present in that class c i.e., NokiaASeries
         Annotation an = c.getAnnotation(SmartPhone.class);
 
-        //Here an is of annotation type where we can use type casting to change the type of the variable
+        //Here *an* is of annotation type where we can use type casting to change the type of the variable
         SmartPhone s = (SmartPhone) an;
 
 

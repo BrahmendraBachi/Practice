@@ -26,9 +26,10 @@ class Mobile1{
 
 }
 */
-
-//Every enum creates a class with the name of enum as in the above way
-//enum extends Enum Class and multiple inheritance cannot be done but can implement n number of interfaces
+/*
+   * Every enum creates a class with the name of enum as in the above way
+   * enum extends Enum Class and multiple inheritance cannot be done but can implement n number of interfaces
+*/
 enum Mobile1{
     APPLE, SAMSUNG, REDMI;
 
