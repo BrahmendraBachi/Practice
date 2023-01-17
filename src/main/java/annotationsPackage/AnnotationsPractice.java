@@ -24,6 +24,9 @@ import java.lang.annotation.*;
 
 }
 
+
+
+
 // we can declare this annotation
 // with one value as *os* has default value
 
@@ -51,9 +54,14 @@ class NokiaASeries{
 
 
 
+
+
 public class AnnotationsPractice{
 
+
     public static void main(String[] args) {
+
+
         NokiaASeries obj = new NokiaASeries("A Series", 100000);
 
         Class c = obj.getClass();
@@ -71,11 +79,10 @@ public class AnnotationsPractice{
         System.out.println(s.os());
         System.out.println(s.version());
 
+
+
+
     }
-
-
-
-
-
-
 }
+
+

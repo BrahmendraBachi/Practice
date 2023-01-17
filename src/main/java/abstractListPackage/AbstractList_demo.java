@@ -15,4 +15,6 @@ public class AbstractList_demo extends AbstractList {
     public int size() {
         return 0;
     }
+
+
 }

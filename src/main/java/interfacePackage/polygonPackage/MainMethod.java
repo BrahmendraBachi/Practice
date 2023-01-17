@@ -1,14 +1,13 @@
 package interfacePackage.polygonPackage;
 
-import interfacePackage.polygonPackage.rectangle.Rectangle;
-
 import interfacePackage.polygonPackage.triangle.Triangle;
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class MainMethod {
+
 
     @GetMapping("/super")
     public String superRaMacha(){
@@ -16,6 +15,14 @@ public class MainMethod {
     }
 
     public static void main(String[] args) {
+
+        Map<String, Double> values = new HashMap<>();
+        values.put("sideA", 10.0);
+        values.put("sideB", 10.0);
+        values.put("sideC", 10.0);
+
+
+
         getPolygon_Area(new Triangle(10, 20, 20));
 
     }

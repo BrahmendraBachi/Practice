@@ -1,5 +1,7 @@
 package enumPackage;
 
+import java.awt.image.CropImageFilter;
+
 public class EnumPractice {
     public static void main(String[] args) {
 
@@ -52,4 +54,27 @@ enum Mobile2{
     public int getPrice(){
         return price;
     }
+}
+
+enum CinemaIndustry{
+    BOLLYWOOD("Hindi", "North India"), TOLLYWOOD("Telugu", "Andhra Pradesh");
+
+    String language;
+
+    String region;
+
+    CinemaIndustry(String language, String region){
+        this.language = language;
+        this.region = region;
+    }
+}
+
+class sample{
+
+    private static CinemaIndustry industry = CinemaIndustry.BOLLYWOOD;
+
+    public static void main(String[] args) {
+        System.out.println(industry);
+    }
+
 }
