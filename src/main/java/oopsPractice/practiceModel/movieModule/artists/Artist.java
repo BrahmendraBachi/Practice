@@ -1,4 +1,6 @@
-package oopsPractice.practiceModle.movieModule.artists;
+package oopsPractice.practiceModel.movieModule.artists;
+
+import basicInformationPackage.Gender;
 
 public interface Artist {
 
@@ -6,13 +8,13 @@ public interface Artist {
 
     String getName();
 
-    void setAge(String age);
+    void setAge(int age);
 
-    String getAge();
+    int getAge();
 
     void setGender(Gender gender);
 
-    String getGender();
+    Gender getGender();
 
     void setPhoneNumber(String phoneNumber);
 
@@ -24,7 +26,7 @@ public interface Artist {
 
     void setProfession(Profession profession);
 
-    String getProfession();
+    Profession getProfession();
 
     void setFatherName(String fatherName);
 

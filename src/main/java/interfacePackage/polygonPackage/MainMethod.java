@@ -32,6 +32,8 @@ public class MainMethod {
         System.out.println(polygon);
 
         System.out.println(polygon.getArea());
+
+
     }
 
 }

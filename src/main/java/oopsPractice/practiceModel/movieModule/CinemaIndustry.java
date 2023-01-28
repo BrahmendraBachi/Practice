@@ -1,4 +1,4 @@
-package oopsPractice.practiceModle.movieModule;
+package oopsPractice.practiceModel.movieModule;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
@@ -9,8 +9,6 @@ import java.lang.annotation.Target;
 @Target(ElementType.FIELD)
 public @interface CinemaIndustry {
 
-    String language();
-
-    String region();
+    boolean required() default true;
 
 }

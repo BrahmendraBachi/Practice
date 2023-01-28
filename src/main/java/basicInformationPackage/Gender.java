@@ -1,4 +1,4 @@
-package oopsPractice.practiceModle.movieModule.artists;
+package basicInformationPackage;
 
 public enum Gender {
 
