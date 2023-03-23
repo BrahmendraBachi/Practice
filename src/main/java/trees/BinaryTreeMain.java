@@ -1,5 +1,8 @@
 package trees;
 
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+
 public class BinaryTreeMain {
 
     public static void main(String[] args){

@@ -1,6 +1,5 @@
 package annotationsPackage;
 
-import castingPackage.Class_A;
 
 import java.lang.annotation.*;
 
@@ -78,9 +77,6 @@ public class AnnotationsPractice{
         //prints the value present in the annotation - SmartPhone
         System.out.println(s.os());
         System.out.println(s.version());
-
-
-
 
     }
 }

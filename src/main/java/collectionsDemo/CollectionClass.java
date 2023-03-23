@@ -6,6 +6,15 @@ public class CollectionClass {
 
     public static void main(String[] args) {
 
+        //Array
+        int[] numArr = {1, 2, 3, 4};
+
+        //Multi dimensional array
+        int[][] twoDArr = {{1, 2, 3}, {4, 5, 6}};
+
+
+        /* Array can be created with any object type as obj_typ[], obj_typ[][] */
+
         // Can take any object
         List values = new ArrayList();
 

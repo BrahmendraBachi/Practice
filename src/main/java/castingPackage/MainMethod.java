@@ -13,9 +13,13 @@ public class MainMethod {
 
         //This is also called as Runtime Polymorphism
 
-        Class_B b = (Class_B) new Class_A();
+//        Class_B b = (Class_B) new Class_A();
 
-        System.out.println(b.var);
+//        System.out.println(b.var);
+
+        Class_A obj = new Class_B("HAari");
+
+        System.out.println(obj);
 
 
     }
